@@ -1,0 +1,66 @@
+[
+  {
+    "id": "south-pole-surface",
+    "name": "月南極域",
+    "type": "surface",
+    "description": "日照・水氷・標高条件を踏まえ、拠点候補として繰り返し参照される主要エリア。",
+    "position": { "x": 44, "y": 54 },
+    "sourcePages": [185, 307]
+  },
+  {
+    "id": "habitat-zone",
+    "name": "居住ゾーン",
+    "type": "habitat",
+    "description": "長期滞在、生命維持、医療、QOL、研究活動の核となる与圧空間。",
+    "position": { "x": 53, "y": 50 },
+    "sourcePages": [183, 187, 188]
+  },
+  {
+    "id": "science-zone",
+    "name": "観測ゾーン",
+    "type": "science",
+    "description": "月面天文台、月震計、長期観測機器などを配置する科学機能エリア。",
+    "position": { "x": 65, "y": 36 },
+    "sourcePages": [56, 60, 187]
+  },
+  {
+    "id": "construction-zone",
+    "name": "建設ゾーン",
+    "type": "construction",
+    "description": "整地、基礎構築、遮蔽材製造、道路造成、拠点拡張を担うエリア。",
+    "position": { "x": 38, "y": 43 },
+    "sourcePages": [60, 187, 188]
+  },
+  {
+    "id": "resource-zone",
+    "name": "資源採掘・推薬ゾーン",
+    "type": "resource",
+    "description": "水資源採掘、抽出、推薬生成、資源加工が集中するエリア。",
+    "position": { "x": 31, "y": 67 },
+    "sourcePages": [57, 65, 250, 563]
+  },
+  {
+    "id": "logistics-zone",
+    "name": "着陸・物流ゾーン",
+    "type": "logistics",
+    "description": "着陸、貨物受け渡し、倉庫、道路接続、搬送ハブを担う物流拠点。",
+    "position": { "x": 70, "y": 60 },
+    "sourcePages": [183, 187]
+  },
+  {
+    "id": "orbit-zone",
+    "name": "月近傍・月周回",
+    "type": "orbit",
+    "description": "Gateway相当の月近傍拠点、月周回通信中継、測位衛星が運用される空間。",
+    "position": { "x": 81, "y": 18, "z": 1 },
+    "sourcePages": [205, 318, 343]
+  },
+  {
+    "id": "commercial-zone",
+    "name": "商業利用エリア",
+    "type": "commercial",
+    "description": "データ利用、観光、サービス、居住区内外の新規産業が立ち上がる想定エリア。",
+    "position": { "x": 57, "y": 71 },
+    "sourcePages": [60, 63, 66]
+  }
+]

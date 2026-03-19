@@ -1,0 +1,44 @@
+[
+  {
+    "id": "jaxa",
+    "name": "JAXA",
+    "type": "government",
+    "role": "全体シナリオ、技術ロードマップ、通信・測位、有人滞在技術、与圧ローバなどの中核的推進主体。",
+    "sourcePages": [24, 27, 716]
+  },
+  {
+    "id": "industry",
+    "name": "民間事業者",
+    "type": "private",
+    "role": "輸送、資源利用、データ、観光、保守運用など産業化局面を担う主体。",
+    "sourcePages": [27, 61, 793]
+  },
+  {
+    "id": "academia",
+    "name": "学術コミュニティ",
+    "type": "academia",
+    "role": "月面3科学、観測機器、サンプル分析、環境理解を主導する主体。",
+    "sourcePages": [26, 56, 133]
+  },
+  {
+    "id": "international",
+    "name": "国際協力パートナー",
+    "type": "international",
+    "role": "Gateway、LunaNet、LANS、国際有人ミッション、月面拠点構築の共同主体。",
+    "sourcePages": [24, 182, 343]
+  },
+  {
+    "id": "crew",
+    "name": "月面クルー",
+    "type": "crew",
+    "role": "科学探査、建設、保守、運用、長期滞在、事業飛行士を含む実行主体。",
+    "sourcePages": [59, 60, 185]
+  },
+  {
+    "id": "robotic",
+    "name": "自律ロボット群",
+    "type": "robotic",
+    "role": "無人施工、環境計測、物流支援、資源採掘、保守点検を担う。",
+    "sourcePages": [57, 183, 717]
+  }
+]

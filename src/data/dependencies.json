@@ -1,0 +1,22 @@
+[
+  { "id": "dep-1", "fromId": "commercial-operations", "toId": "habitation-district", "relation": "requires", "description": "商業活動は居住区と安全な滞在環境を前提とする。", "sourcePages": [60, 66] },
+  { "id": "dep-2", "fromId": "commercial-operations", "toId": "communication-network", "relation": "requires", "description": "データ利用や観光を含む活動には通信基盤が必要。", "sourcePages": [60, 63] },
+  { "id": "dep-3", "fromId": "lunar-observatory", "toId": "construction-area", "relation": "requires", "description": "大型観測設備には施工と基礎構築が必要。", "sourcePages": [60, 187] },
+  { "id": "dep-4", "fromId": "lunar-observatory", "toId": "power-infrastructure", "relation": "requires", "description": "大型観測設備は安定した電力が必要。", "sourcePages": [60, 301] },
+  { "id": "dep-5", "fromId": "pressurized-rover", "toId": "navigation-system", "relation": "requires", "description": "広域探査と自律運用には測位が必要。", "sourcePages": [343, 716] },
+  { "id": "dep-6", "fromId": "pressurized-rover", "toId": "communication-network", "relation": "requires", "description": "有人表面探査には常時通信が必要。", "sourcePages": [329, 743] },
+  { "id": "dep-7", "fromId": "propellant-production", "toId": "water-mining-site", "relation": "requires", "description": "推薬生成は水資源の存在把握と採掘を前提とする。", "sourcePages": [258, 563] },
+  { "id": "dep-8", "fromId": "propellant-production", "toId": "power-infrastructure", "relation": "requires", "description": "推薬生成は大電力要求を伴う。", "sourcePages": [301, 302] },
+  { "id": "dep-9", "fromId": "continuous-residency", "toId": "crewed-lunar-outpost", "relation": "depends_on", "description": "常時滞在は拠点機能と運用体制に依存する。", "sourcePages": [59, 60] },
+  { "id": "dep-10", "fromId": "continuous-residency", "toId": "medical-support", "relation": "depends_on", "description": "常時滞在では医療・健康管理が不可欠。", "sourcePages": [60, 66] },
+  { "id": "dep-11", "fromId": "continuous-residency", "toId": "food-production", "relation": "depends_on", "description": "長期居住には食料供給の自立性が重要。", "sourcePages": [66, 676] },
+  { "id": "dep-12", "fromId": "construction-work", "toId": "surface-mobility-logistics", "relation": "depends_on", "description": "建設は月面輸送と物流なしには進まない。", "sourcePages": [65, 187] },
+  { "id": "dep-13", "fromId": "communication-network", "toId": "lunar-relay", "relation": "supports", "description": "月周回中継がネットワークの可用性を支える。", "sourcePages": [337, 339] },
+  { "id": "dep-14", "fromId": "navigation-system", "toId": "data-architecture", "relation": "supports", "description": "測位真値や軌道時刻推定はデータ基盤を必要とする。", "sourcePages": [347, 349] },
+  { "id": "dep-15", "fromId": "data-market", "toId": "data-architecture", "relation": "depends_on", "description": "データ市場は取得・統合・伝送基盤の上に成立する。", "sourcePages": [794] },
+  { "id": "dep-16", "fromId": "surface-isru", "toId": "resource-utilization", "relation": "enables", "description": "資源利用活動が産業化を可能にする。", "sourcePages": [65, 180] },
+  { "id": "dep-17", "fromId": "cislunar-transport", "toId": "cargo-transport", "relation": "depends_on", "description": "シスルナ輸送産業は貨物輸送能力に依存する。", "sourcePages": [63, 716] },
+  { "id": "dep-18", "fromId": "tourism-and-experience", "toId": "cislunar-transport", "relation": "requires", "description": "観光は往来を可能にする輸送インフラを必要とする。", "sourcePages": [63, 794] },
+  { "id": "dep-19", "fromId": "tourism-and-experience", "toId": "qol-systems", "relation": "requires", "description": "旅行者受け入れには快適性や娯楽の整備が必要。", "sourcePages": [66, 797] },
+  { "id": "dep-20", "fromId": "mars-analog-stay", "toId": "crewed-lunar-outpost", "relation": "supports", "description": "月面長期滞在実証が火星有人探査の前段を支える。", "sourcePages": [180, 716] }
+]

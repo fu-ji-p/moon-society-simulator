@@ -1,0 +1,131 @@
+[
+  {
+    "id": "environment-resource-survey",
+    "name": "環境・資源調査",
+    "type": "exploration",
+    "description": "放射線、地形、地盤、水氷分布、日照などの調査を通じて次段階の設計前提を整える。",
+    "eraIds": ["2020s", "early-2030s"],
+    "actorIds": ["academia", "robotic", "jaxa"],
+    "requiredAssetIds": ["water-mining-site", "data-architecture", "science-observatories"],
+    "outputIds": ["construction-area", "propellant-plant"],
+    "sourcePages": [57, 58, 563]
+  },
+  {
+    "id": "short-stay",
+    "name": "短期有人滞在",
+    "type": "habitation",
+    "description": "2020年代から2030年代前半にかけて拡大する有人活動。科学と環境把握の両方に寄与する。",
+    "eraIds": ["2020s", "early-2030s"],
+    "actorIds": ["crew", "international"],
+    "requiredAssetIds": ["pressurized-rover", "crewed-lander", "communication-network"],
+    "outputIds": ["environment-resource-survey"],
+    "sourcePages": [56, 58]
+  },
+  {
+    "id": "long-stay",
+    "name": "長期滞在",
+    "type": "habitation",
+    "description": "6か月から500日級の滞在実証を経て、拠点の運用と拡張を学ぶ段階。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s"],
+    "actorIds": ["crew", "jaxa"],
+    "requiredAssetIds": ["crewed-lunar-outpost", "medical-support", "food-production"],
+    "outputIds": ["construction-work", "data-ops"],
+    "sourcePages": [180, 185, 186]
+  },
+  {
+    "id": "continuous-residency",
+    "name": "常時滞在",
+    "type": "habitation",
+    "description": "クルーローテーションを前提に、40人規模常時滞在へ向かう定常運用。",
+    "eraIds": ["late-2030s-early-2040s", "2040s"],
+    "actorIds": ["crew", "industry"],
+    "requiredAssetIds": ["habitation-district", "power-infrastructure", "medical-support", "food-production"],
+    "outputIds": ["commercial-operations"],
+    "sourcePages": [59, 60, 61]
+  },
+  {
+    "id": "construction-work",
+    "name": "建設作業",
+    "type": "construction",
+    "description": "整地、道路、基礎、居住構造物、配線、遮蔽構築を行う月面施工。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "actorIds": ["robotic", "crew", "industry"],
+    "requiredAssetIds": ["construction-area", "power-infrastructure", "surface-transport"],
+    "outputIds": ["habitation-district", "science-observatories"],
+    "sourcePages": [60, 187, 188]
+  },
+  {
+    "id": "resource-utilization",
+    "name": "資源利用",
+    "type": "industrial",
+    "description": "水資源やレゴリスを採掘し、燃料・資材・現地利用へ接続する活動。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "actorIds": ["robotic", "industry"],
+    "requiredAssetIds": ["water-mining-site", "surface-transport", "power-infrastructure"],
+    "outputIds": ["propellant-production"],
+    "sourcePages": [57, 58, 180]
+  },
+  {
+    "id": "propellant-production",
+    "name": "推薬生成",
+    "type": "industrial",
+    "description": "月面の水資源を使った推薬生成。再使用型輸送や継続活動の成立性に影響する。",
+    "eraIds": ["late-2030s-early-2040s", "2040s"],
+    "actorIds": ["industry", "jaxa"],
+    "requiredAssetIds": ["propellant-plant", "water-mining-site", "power-infrastructure"],
+    "outputIds": ["crewed-lander"],
+    "sourcePages": [258, 563]
+  },
+  {
+    "id": "science-observation",
+    "name": "科学観測",
+    "type": "science",
+    "description": "月面3科学と月面環境理解を継続・拡大・多様化する活動。",
+    "eraIds": ["2020s", "early-2030s", "late-2030s-early-2040s", "2040s"],
+    "actorIds": ["academia", "crew"],
+    "requiredAssetIds": ["science-observatories", "lunar-observatory", "seismometer-network"],
+    "outputIds": ["data-ops"],
+    "sourcePages": [26, 57, 60]
+  },
+  {
+    "id": "commercial-operations",
+    "name": "商業的調査・事業活動",
+    "type": "industrial",
+    "description": "データ利用、観光、保守運用、サービスなど民間利用が立ち上がる段階。",
+    "eraIds": ["2040s"],
+    "actorIds": ["industry", "international"],
+    "requiredAssetIds": ["habitation-district", "communication-network", "qol-systems"],
+    "outputIds": ["industry-services"],
+    "sourcePages": [60, 63, 794]
+  },
+  {
+    "id": "mars-analog-stay",
+    "name": "火星有人ミッションに向けた模擬滞在",
+    "type": "habitation",
+    "description": "500日級滞在や再生型生命維持系の実証を通じて、Moon to Mars文脈に接続する。",
+    "eraIds": ["late-2030s-early-2040s", "2040s"],
+    "actorIds": ["jaxa", "crew", "international"],
+    "requiredAssetIds": ["crewed-lunar-outpost", "medical-support", "data-architecture"],
+    "sourcePages": [180, 716]
+  },
+  {
+    "id": "data-ops",
+    "name": "データ取得・統合・伝送",
+    "type": "data",
+    "description": "観測データ、測位真値、運用データを収集し、地上と月面で統合・活用する横断活動。",
+    "eraIds": ["2020s", "early-2030s", "late-2030s-early-2040s", "2040s"],
+    "actorIds": ["jaxa", "academia", "industry"],
+    "requiredAssetIds": ["data-architecture", "communication-network", "navigation-system"],
+    "sourcePages": [349, 794]
+  },
+  {
+    "id": "surface-mobility-logistics",
+    "name": "月面移動・物流",
+    "type": "logistics",
+    "description": "クルー、建機、資源、物資をつなぐ表面移動と物流運用。",
+    "eraIds": ["2020s", "early-2030s", "late-2030s-early-2040s", "2040s"],
+    "actorIds": ["crew", "robotic", "industry"],
+    "requiredAssetIds": ["pressurized-rover", "surface-transport", "navigation-system"],
+    "sourcePages": [64, 65, 716]
+  }
+]

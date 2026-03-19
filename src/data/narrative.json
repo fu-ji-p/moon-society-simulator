@@ -1,0 +1,61 @@
+[
+  {
+    "id": "why-lunar-society",
+    "title": "なぜ月面社会を構想するのか",
+    "body": "この構想は、単なる基地ではなく、科学・生活・輸送・資源利用・産業が相互依存する持続的な月面社会を見通すための案です。",
+    "focusView": "home",
+    "focusTargetIds": ["crewed-lunar-outpost", "data-architecture"],
+    "sourcePages": [28, 29, 61]
+  },
+  {
+    "id": "prepare-2020s",
+    "title": "2020年代は準備段階",
+    "body": "月震計、サンプル採取、水氷・地盤調査、短期有人滞在を通じて、次の年代で必要になる設計前提を整えます。",
+    "focusView": "eras",
+    "focusTargetIds": ["2020s"],
+    "eraId": "2020s",
+    "sourcePages": [56, 57, 184]
+  },
+  {
+    "id": "infra-2030s",
+    "title": "2030年代は拠点とインフラ整備へ",
+    "body": "資源の広域調査、建設候補地の精査、電源や建機の投入、居住モジュールの設置が始まり、月面社会の骨格が現れます。",
+    "focusView": "map",
+    "focusTargetIds": ["construction-area", "power-infrastructure", "crewed-lunar-outpost"],
+    "eraId": "early-2030s",
+    "sourcePages": [58, 183, 188]
+  },
+  {
+    "id": "forty-crew",
+    "title": "2040年代は40人常時滞在構想",
+    "body": "大型観測設備と大型滞在拠点の構築が始まり、建設作業員を含む多様なクルーが常時滞在する社会へ移行します。",
+    "focusView": "eras",
+    "focusTargetIds": ["2040s"],
+    "eraId": "2040s",
+    "sourcePages": [60, 61]
+  },
+  {
+    "id": "society-links",
+    "title": "科学と生活と産業は分かれていない",
+    "body": "科学機器を動かすための電力と通信は、居住、医療、物流、データ利用、産業サービスとも基盤を共有します。",
+    "focusView": "functions",
+    "focusTargetIds": ["science-observatories", "habitation-district", "data-architecture"],
+    "sourcePages": [29, 60, 66]
+  },
+  {
+    "id": "infra-backbone",
+    "title": "通信・測位・電力・輸送・データが社会を支える",
+    "body": "月面社会では、インフラが先にあり、その上に観測、建設、資源利用、商業活動が乗る構造になっています。",
+    "focusView": "dependencies",
+    "focusTargetIds": ["communication-network", "navigation-system", "power-infrastructure"],
+    "sourcePages": [301, 343, 716]
+  },
+  {
+    "id": "urban-transition",
+    "title": "月面社会はどのように都市へ近づくのか",
+    "body": "都市発展モデルの参照では、観光だけではなく、滞在者を支えるインフラ、データ市場、輸送コスト低減が発展要因として重視されます。",
+    "focusView": "sources",
+    "focusTargetIds": ["src-urban-model"],
+    "sourcePages": [793, 794, 796, 797]
+  }
+]

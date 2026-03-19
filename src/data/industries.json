@@ -1,0 +1,102 @@
+[
+  {
+    "id": "cislunar-transport",
+    "name": "地球-月間輸送サービス",
+    "domain": "輸送",
+    "locationType": "earth-moon-space",
+    "description": "物資輸送、有人輸送、燃料補給、軌道間輸送を含むシスルナ物流産業。",
+    "eraIds": ["2020s", "early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["cargo-transport", "lunar-orbit-hub", "earth-moon-link"],
+    "sourcePages": [63, 793]
+  },
+  {
+    "id": "orbital-communications",
+    "name": "月通信・測位サービス",
+    "domain": "通信・測位",
+    "locationType": "earth-moon-space",
+    "description": "月-月軌道-地球の通信、月測位、リアルタイム伝送、相互運用サービス。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["communication-network", "navigation-system", "lunar-relay"],
+    "sourcePages": [63, 343, 767]
+  },
+  {
+    "id": "surface-logistics",
+    "name": "月面物流・輸送",
+    "domain": "輸送",
+    "locationType": "lunar-surface-exposed",
+    "description": "短中長距離輸送、倉庫、資源移送、液体・気体搬送を支える産業。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["surface-transport", "power-infrastructure", "navigation-system"],
+    "sourcePages": [64, 65]
+  },
+  {
+    "id": "surface-isru",
+    "name": "月面資源利用・加工",
+    "domain": "資源",
+    "locationType": "lunar-surface-exposed",
+    "description": "水・酸素・水素・レゴリス利用、3Dプリント、廃棄物処理まで含む資源系産業。",
+    "eraIds": ["late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["water-mining-site", "propellant-plant", "power-infrastructure"],
+    "sourcePages": [65, 563]
+  },
+  {
+    "id": "surface-construction",
+    "name": "月面建設・保守",
+    "domain": "建設",
+    "locationType": "lunar-surface-exposed",
+    "description": "インフラ建設、道路舗装、シェルター、保全ロボット、運用保守を担う産業。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["construction-area", "power-infrastructure", "surface-transport"],
+    "sourcePages": [65, 187]
+  },
+  {
+    "id": "pressurized-life-support",
+    "name": "居住区内生活支援",
+    "domain": "有人",
+    "locationType": "lunar-surface-pressurized",
+    "description": "食品、生産、生命維持、医療、日用品、清掃、防災を支える居住区内産業。",
+    "eraIds": ["late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["habitation-district", "food-production", "medical-support"],
+    "sourcePages": [66, 676]
+  },
+  {
+    "id": "pressurized-services",
+    "name": "居住区内サービス・娯楽",
+    "domain": "観光・サービス",
+    "locationType": "lunar-surface-pressurized",
+    "description": "教育、フィットネス、ショッピング、ホテル、作業補助ロボットを含むサービス群。",
+    "eraIds": ["2040s"],
+    "requiredInfrastructureIds": ["qol-systems", "habitation-district", "communication-network"],
+    "sourcePages": [66, 797]
+  },
+  {
+    "id": "earth-side-manufacturing",
+    "name": "地上側装備・解析産業",
+    "domain": "地球上",
+    "locationType": "earth",
+    "description": "輸送機、通信機器、環境試験、分析、地上管制、国際標準対応を担う地上産業。",
+    "eraIds": ["2020s", "early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["earth-moon-link", "data-architecture"],
+    "sourcePages": [27, 717]
+  },
+  {
+    "id": "data-market",
+    "name": "データ市場・運用支援",
+    "domain": "データ",
+    "locationType": "location-agnostic",
+    "description": "月面環境データ、運用データ、測位真値、観測データの統合・活用から生まれる市場。",
+    "eraIds": ["early-2030s", "late-2030s-early-2040s", "2040s"],
+    "requiredInfrastructureIds": ["data-architecture", "communication-network"],
+    "sourcePages": [349, 794]
+  },
+  {
+    "id": "tourism-and-experience",
+    "name": "観光・体験産業",
+    "domain": "観光",
+    "locationType": "location-agnostic",
+    "description": "観光需要は成長要因の一つだが、単独では都市発展の主因になりにくく、他の要因との組み合わせが必要とされる。",
+    "eraIds": ["2040s"],
+    "requiredInfrastructureIds": ["habitation-district", "cislunar-transport", "qol-systems"],
+    "sourcePages": [63, 794, 796]
+  }
+]

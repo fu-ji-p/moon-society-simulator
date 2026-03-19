@@ -1,0 +1,35 @@
+{
+  "locale": "ja",
+  "views": {
+    "home": "トップ",
+    "eras": "年代ビュー",
+    "map": "月面社会マップ",
+    "functions": "社会機能",
+    "industries": "産業",
+    "dependencies": "依存関係",
+    "sources": "出典",
+    "narrative": "ストーリー"
+  },
+  "tabs": {
+    "life": "生活",
+    "science": "科学",
+    "infrastructure": "インフラ",
+    "mobility": "移動と物流",
+    "resources": "資源と建設",
+    "industry": "産業",
+    "data": "データ"
+  },
+  "relations": {
+    "depends_on": "依存",
+    "enables": "成立させる",
+    "supports": "支える",
+    "requires": "必要とする"
+  },
+  "locationTypes": {
+    "earth-moon-space": "地球-月軌道-月面",
+    "lunar-surface-exposed": "月面居住区外",
+    "lunar-surface-pressurized": "月面居住区内",
+    "earth": "地球上",
+    "location-agnostic": "場所非依存"
+  }
+}

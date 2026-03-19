@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #eef4fa;
+    background:
+      radial-gradient(circle at top left, rgba(125, 192, 255, 0.18), transparent 30%),
+      radial-gradient(circle at top right, rgba(255, 210, 113, 0.15), transparent 28%),
+      linear-gradient(180deg, #142231 0%, #0d1722 55%, #09111a 100%);
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  body {
+    @apply min-h-screen font-sans text-slate-100 antialiased;
+  }
+
+  button {
+    @apply transition duration-200;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border border-white/10 bg-white/5 shadow-panel backdrop-blur-xl;
+  }
+
+  .panel-title {
+    @apply text-lg font-semibold tracking-wide text-slate-50;
+  }
+
+  .tag {
+    @apply rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200;
+  }
+
+  .nav-button {
+    @apply rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-100 hover:border-accent/40 hover:bg-white/10;
+  }
+
+  .nav-button-active {
+    @apply border-accent/60 bg-accent/15 text-white;
+  }
+
+  .chip-button {
+    @apply rounded-full border border-white/10 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10;
+  }
+
+  .chip-button-active {
+    @apply border-highlight/50 bg-highlight/20 text-white;
+  }
+
+  .metric {
+    @apply rounded-2xl border border-white/10 bg-black/10 p-4;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "eraId": "2040s",
+  "mapLayers": ["habitat", "science", "infrastructure", "industry"],
+  "functionTab": "life",
+  "locationFilter": "all",
+  "actorFilter": "all",
+  "dependencyMode": "outgoing"
+}

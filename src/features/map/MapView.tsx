@@ -9,6 +9,43 @@ const layerMap = {
   industry: ["isru", "construction", "commerce", "food", "medical"],
 } as const;
 
+const assetPositions: Record<string, { x: number; y: number }> = {
+  "crewed-lunar-outpost": { x: 50, y: 45 },
+  "habitation-district": { x: 57, y: 48 },
+  "science-observatories": { x: 66, y: 34 },
+  "lunar-observatory": { x: 73, y: 27 },
+  "seismometer-network": { x: 80, y: 38 },
+  "sample-return-facility": { x: 61, y: 27 },
+  "power-infrastructure": { x: 39, y: 34 },
+  "communication-network": { x: 84, y: 21 },
+  "navigation-system": { x: 75, y: 16 },
+  "lunar-relay": { x: 66, y: 13 },
+  "earth-moon-link": { x: 91, y: 12 },
+  "data-architecture": { x: 78, y: 56 },
+  "pressurized-rover": { x: 46, y: 56 },
+  "surface-transport": { x: 70, y: 62 },
+  "lunar-orbit-hub": { x: 55, y: 14 },
+  "cargo-transport": { x: 84, y: 66 },
+  "crewed-lander": { x: 88, y: 52 },
+  "propellant-plant": { x: 26, y: 67 },
+  "water-mining-site": { x: 18, y: 74 },
+  "construction-area": { x: 33, y: 47 },
+  "food-production": { x: 62, y: 56 },
+  "medical-support": { x: 48, y: 63 },
+  "qol-systems": { x: 67, y: 70 },
+};
+
+const zoneAccent: Record<string, string> = {
+  habitat: "#98d6ff",
+  science: "#ffe29a",
+  construction: "#ffb37c",
+  resource: "#8ee0b2",
+  logistics: "#f4c0b7",
+  orbit: "#c3c8ff",
+  surface: "#d8d7d0",
+  commercial: "#f7d8ff",
+};
+
 export function MapView() {
   const activeEraId = useScenarioStore((state) => state.activeEraId);
   const mapLayers = useScenarioStore((state) => state.mapLayers);
@@ -38,12 +75,34 @@ export function MapView() {
           ))}
         </div>
         <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#d7cec2]">
-          <div className="aspect-[16/9] bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.18),transparent_10%),radial-gradient(circle_at_55%_42%,rgba(110,82,44,0.34),transparent_24%),linear-gradient(180deg,#dcd2c5_0%,#bfa894_100%)]">
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(19,27,34,0.18)_100%)]" />
-            <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(125,192,255,0.3),transparent_60%)]" />
+          <div
+            className="aspect-[16/9] bg-cover bg-center"
+            style={{ backgroundImage: "url('/lunar-surface-map.svg')" }}
+          >
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,18,27,0.04)_0%,rgba(10,18,27,0.22)_100%)]" />
+            <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(125,192,255,0.22),transparent_60%)]" />
+            {scenarioData.zones.map((zone) => {
+              if (!zone.position) return null;
+              return (
+                <div
+                  key={zone.id}
+                  className="absolute -translate-x-1/2 -translate-y-1/2"
+                  style={{ left: `${zone.position.x}%`, top: `${zone.position.y}%` }}
+                >
+                  <div
+                    className="h-5 w-5 rounded-full border border-white/50 shadow-[0_0_22px_rgba(255,255,255,0.2)]"
+                    style={{ backgroundColor: zoneAccent[zone.type] ?? "#ffffff55" }}
+                  />
+                  <div className="mt-2 whitespace-nowrap rounded-full bg-black/45 px-2 py-1 text-[10px] text-white/85 backdrop-blur">
+                    {zone.name}
+                  </div>
+                </div>
+              );
+            })}
             {visibleAssets.map((asset) => {
               const zone = scenarioData.zones.find((item) => item.id === asset.zoneId);
               if (!zone?.position) return null;
+              const position = assetPositions[asset.id] ?? zone.position;
               const layerEnabled = mapLayers.some((layer) =>
                 layerMap[layer as keyof typeof layerMap].includes(asset.category as never),
               );
@@ -52,16 +111,16 @@ export function MapView() {
               return (
                 <button
                   key={asset.id}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border px-3 py-2 text-left text-xs shadow-lg ${
+                  className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-2xl border px-3 py-2 text-left text-xs shadow-lg ${
                     isSelected
-                      ? "border-highlight bg-highlight/90 text-slate-900"
-                      : "border-white/25 bg-horizon/80 text-white backdrop-blur"
+                      ? "z-20 border-highlight bg-highlight/92 text-slate-900"
+                      : "z-10 border-white/25 bg-horizon/84 text-white backdrop-blur hover:bg-horizon"
                   }`}
-                  style={{ left: `${zone.position.x}%`, top: `${zone.position.y}%` }}
+                  style={{ left: `${position.x}%`, top: `${position.y}%`, width: "132px" }}
                   onClick={() => setSelectedId(asset.id)}
                   title={asset.name}
                 >
-                  {asset.name}
+                  <span className="block font-medium leading-4">{asset.name}</span>
                 </button>
               );
             })}
